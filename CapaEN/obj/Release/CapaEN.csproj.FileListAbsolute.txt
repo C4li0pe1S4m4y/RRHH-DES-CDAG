@@ -1,0 +1,35 @@
+C:\Users\Administrador\Desktop\SolucionCOG\CapaEN\bin\Release\CapaEN.dll
+C:\Users\Administrador\Desktop\SolucionCOG\CapaEN\bin\Release\CapaEN.pdb
+C:\Users\Administrador\Desktop\SolucionCOG\CapaEN\obj\Release\CapaEN.dll
+C:\Users\Administrador\Desktop\SolucionCOG\CapaEN\obj\Release\CapaEN.pdb
+C:\Users\Administrador\Desktop\SolucionCOG\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\POAPACCOMFIN\SolucionCOG\CapaEN\bin\Release\CapaEN.dll
+C:\Users\Administrador\Desktop\POAPACCOMFIN\SolucionCOG\CapaEN\bin\Release\CapaEN.pdb
+C:\Users\Administrador\Desktop\POAPACCOMFIN\SolucionCOG\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\POAPACCOMFIN\SolucionCOG\CapaEN\obj\Release\CapaEN.dll
+C:\Users\Administrador\Desktop\POAPACCOMFIN\SolucionCOG\CapaEN\obj\Release\CapaEN.pdb
+E:\SolucionCOG\CapaEN\bin\Release\CapaEN.dll
+E:\SolucionCOG\CapaEN\bin\Release\CapaEN.pdb
+E:\SolucionCOG\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+E:\SolucionCOG\CapaEN\obj\Release\CapaEN.dll
+E:\SolucionCOG\CapaEN\obj\Release\CapaEN.pdb
+C:\SIPA\SIPADESARROLLO\CapaEN\bin\Release\CapaEN.dll
+C:\SIPA\SIPADESARROLLO\CapaEN\bin\Release\CapaEN.pdb
+C:\SIPA\SIPADESARROLLO\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+C:\SIPA\SIPADESARROLLO\CapaEN\obj\Release\CapaEN.dll
+C:\SIPA\SIPADESARROLLO\CapaEN\obj\Release\CapaEN.pdb
+C:\Users\user Dell\Documents\GitHub\SIPA\CapaEN\bin\Release\CapaEN.dll
+C:\Users\user Dell\Documents\GitHub\SIPA\CapaEN\bin\Release\CapaEN.pdb
+C:\Users\user Dell\Documents\GitHub\SIPA\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+C:\Users\user Dell\Documents\GitHub\SIPA\CapaEN\obj\Release\CapaEN.dll
+C:\Users\user Dell\Documents\GitHub\SIPA\CapaEN\obj\Release\CapaEN.pdb
+C:\Users\Administrator\Desktop\PRODUCCION V2\SolucionCDAG\CapaEN\bin\Release\CapaEN.dll
+C:\Users\Administrator\Desktop\PRODUCCION V2\SolucionCDAG\CapaEN\bin\Release\CapaEN.pdb
+C:\Users\Administrator\Desktop\PRODUCCION V2\SolucionCDAG\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\PRODUCCION V2\SolucionCDAG\CapaEN\obj\Release\CapaEN.dll
+C:\Users\Administrator\Desktop\PRODUCCION V2\SolucionCDAG\CapaEN\obj\Release\CapaEN.pdb
+F:\CDAG\RRHH\SIPA\CapaEN\bin\Release\CapaEN.dll
+F:\CDAG\RRHH\SIPA\CapaEN\bin\Release\CapaEN.pdb
+F:\CDAG\RRHH\SIPA\CapaEN\obj\Release\CapaEN.csprojResolveAssemblyReference.cache
+F:\CDAG\RRHH\SIPA\CapaEN\obj\Release\CapaEN.dll
+F:\CDAG\RRHH\SIPA\CapaEN\obj\Release\CapaEN.pdb

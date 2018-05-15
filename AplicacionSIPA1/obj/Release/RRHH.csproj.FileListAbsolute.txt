@@ -1,0 +1,16 @@
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\CapaAD.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\CapaEN.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\CapaLN.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\Microsoft.ReportViewer.WebForms.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\NumeroaLetras.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\Microsoft.ReportViewer.Common.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\CapaAD.pdb
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\CapaEN.pdb
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\CapaLN.pdb
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\Microsoft.ReportViewer.WebForms.xml
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\obj\Release\RRHH.csprojResolveAssemblyReference.cache
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\RRHH.dll.config
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\RRHH.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\bin\RRHH.pdb
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\obj\Release\RRHH.dll
+F:\CDAG\RRHH\SIPA\AplicacionSIPA1\obj\Release\RRHH.pdb

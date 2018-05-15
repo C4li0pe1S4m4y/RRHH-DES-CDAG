@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A91E3AD5-0813-4504-AA5C-AD5DE1A89809}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RRHH</RootNamespace>
+    <AssemblyName>RRHH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44360</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Crystal 13\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Crystal 13\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Crystal 13\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Crystal 13\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Consultas\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="bin\CapaAD.dll" />
+    <Content Include="bin\CapaAD.pdb" />
+    <Content Include="bin\CapaEN.dll" />
+    <Content Include="bin\CapaEN.pdb" />
+    <Content Include="bin\CapaLN.dll" />
+    <Content Include="bin\CapaLN.pdb" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\NumeroaLetras.dll" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\Imagenes\empleado_default.png" />
+    <Content Include="css\Fondos\logo-cdag.png" />
+    <Content Include="css\main.css" />
+    <Content Include="css\util.css" />
+    <Content Include="dashboard.aspx" />
+    <Content Include="img\cargar.gif" />
+    <Content Include="img\logoBcoGuate.jpg" />
+    <Content Include="RH\CargarArchivo.aspx" />
+    <Content Include="RH\Catalogos\Alergia\Editar.aspx" />
+    <Content Include="RH\Catalogos\Alergia\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Alergia\ListadoAlergia.aspx" />
+    <Content Include="RH\Catalogos\Departamento\Editar.aspx" />
+    <Content Include="RH\Catalogos\Departamento\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Departamento\ListadoDepartamento.aspx" />
+    <Content Include="RH\Catalogos\Enfermedad\Editar.aspx" />
+    <Content Include="RH\Catalogos\Enfermedad\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Enfermedad\ListadoEnfermedad.aspx" />
+    <Content Include="RH\Catalogos\Estado_Civil\Editar.aspx" />
+    <Content Include="RH\Catalogos\Estado_Civil\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Estado_Civil\ListadoEstadoCivil.aspx" />
+    <Content Include="RH\Catalogos\Estado_Contrato\Editar.aspx" />
+    <Content Include="RH\Catalogos\Estado_Contrato\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Estado_Contrato\ListadoEstadoContrato.aspx" />
+    <Content Include="RH\Catalogos\Genero\Editar.aspx" />
+    <Content Include="RH\Catalogos\Genero\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Genero\ListadoGeneros.aspx" />
+    <Content Include="RH\Catalogos\Municipio\Editar.aspx" />
+    <Content Include="RH\Catalogos\Municipio\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Municipio\ListadoMunicipio.aspx" />
+    <Content Include="RH\Catalogos\Parentesco\Editar.aspx" />
+    <Content Include="RH\Catalogos\Parentesco\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Parentesco\ListadoParentesco.aspx" />
+    <Content Include="RH\Catalogos\Profesion\Editar.aspx" />
+    <Content Include="RH\Catalogos\Profesion\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Profesion\ListadoProfesion.aspx" />
+    <Content Include="RH\Catalogos\Renglon_Presupuestario\Editar.aspx" />
+    <Content Include="RH\Catalogos\Renglon_Presupuestario\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Renglon_Presupuestario\ListadoRenglonPresupuestario.aspx" />
+    <Content Include="RH\Catalogos\Tipo_Licencia\Editar.aspx" />
+    <Content Include="RH\Catalogos\Tipo_Licencia\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Tipo_Licencia\ListadoTipoLicencia.aspx" />
+    <Content Include="RH\Catalogos\Tipo_Sangre\Editar.aspx" />
+    <Content Include="RH\Catalogos\Tipo_Sangre\Eliminar.aspx" />
+    <Content Include="RH\Catalogos\Tipo_Sangre\ListadoTipoSangre.aspx" />
+    <Content Include="RH\Empleado\Editar.aspx" />
+    <Content Include="RH\Empleado\Crear.aspx" />
+    <Content Include="RH\Empleado\EditarFicha.aspx" />
+    <Content Include="RH\Empleado\IngresoVacaciones.aspx" />
+    <Content Include="RH\Empleado\ListadoEmpleados.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="RH\Empleado\FileUploadHandler.ashx" />
+    <Content Include="RH\Empleado\DownloadFileHandler.ashx" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="RH\Empleado\ListadoHistorialContratos.aspx" />
+    <Content Include="RH\Vacaciones\Crear.aspx" />
+    <Content Include="RH\Vacaciones\ListaSolicitudVacaciones.aspx" />
+    <Content Include="Scripts\i18n\af.js" />
+    <Content Include="Scripts\i18n\ar.js" />
+    <Content Include="Scripts\i18n\az.js" />
+    <Content Include="Scripts\i18n\bg.js" />
+    <Content Include="Scripts\i18n\bs.js" />
+    <Content Include="Scripts\i18n\ca.js" />
+    <Content Include="Scripts\i18n\cs.js" />
+    <Content Include="Scripts\i18n\da.js" />
+    <Content Include="Scripts\i18n\de.js" />
+    <Content Include="Scripts\i18n\dsb.js" />
+    <Content Include="Scripts\i18n\el.js" />
+    <Content Include="Scripts\i18n\en.js" />
+    <Content Include="Scripts\i18n\es.js" />
+    <Content Include="Scripts\i18n\et.js" />
+    <Content Include="Scripts\i18n\eu.js" />
+    <Content Include="Scripts\i18n\fa.js" />
+    <Content Include="Scripts\i18n\fi.js" />
+    <Content Include="Scripts\i18n\fr.js" />
+    <Content Include="Scripts\i18n\gl.js" />
+    <Content Include="Scripts\i18n\he.js" />
+    <Content Include="Scripts\i18n\hi.js" />
+    <Content Include="Scripts\i18n\hr.js" />
+    <Content Include="Scripts\i18n\hsb.js" />
+    <Content Include="Scripts\i18n\hu.js" />
+    <Content Include="Scripts\i18n\hy.js" />
+    <Content Include="Scripts\i18n\id.js" />
+    <Content Include="Scripts\i18n\is.js" />
+    <Content Include="Scripts\i18n\it.js" />
+    <Content Include="Scripts\i18n\ja.js" />
+    <Content Include="Scripts\i18n\km.js" />
+    <Content Include="Scripts\i18n\ko.js" />
+    <Content Include="Scripts\i18n\lt.js" />
+    <Content Include="Scripts\i18n\lv.js" />
+    <Content Include="Scripts\i18n\mk.js" />
+    <Content Include="Scripts\i18n\ms.js" />
+    <Content Include="Scripts\i18n\nb.js" />
+    <Content Include="Scripts\i18n\nl.js" />
+    <Content Include="Scripts\i18n\pl.js" />
+    <Content Include="Scripts\i18n\ps.js" />
+    <Content Include="Scripts\i18n\pt-BR.js" />
+    <Content Include="Scripts\i18n\pt.js" />
+    <Content Include="Scripts\i18n\ro.js" />
+    <Content Include="Scripts\i18n\ru.js" />
+    <Content Include="Scripts\i18n\sk.js" />
+    <Content Include="Scripts\i18n\sl.js" />
+    <Content Include="Scripts\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\i18n\sr.js" />
+    <Content Include="Scripts\i18n\sv.js" />
+    <Content Include="Scripts\i18n\th.js" />
+    <Content Include="Scripts\i18n\tr.js" />
+    <Content Include="Scripts\i18n\uk.js" />
+    <Content Include="Scripts\i18n\vi.js" />
+    <Content Include="Scripts\i18n\zh-CN.js" />
+    <Content Include="Scripts\i18n\zh-TW.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Service References\WsTipoCambio\TipoCambio.disco" />
+    <Content Include="Service References\WsTipoCambio\configuration91.svcinfo" />
+    <Content Include="Service References\WsTipoCambio\configuration.svcinfo" />
+    <Content Include="Service References\WsTipoCambio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\chosen.css" />
+    <Content Include="css\Control.css" />
+    <Content Include="css\Fondos\logoCdag.png" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\screen.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\utilities.css" />
+    <Content Include="css\Fondos\FondoLogin.jpg" />
+    <Content Include="css\Fondos\LogoCOG.png" />
+    <Content Include="css\Fondos\NoImagen.jpg" />
+    <Content Include="img\logoEnc.png" />
+    <Content Include="js\jquery-1.11.2.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\iconic\iconic_stroke.svg" />
+    <Content Include="img\24_bits\accept.png" />
+    <Content Include="img\24_bits\add.png" />
+    <Content Include="img\24_bits\add_page.png" />
+    <Content Include="img\24_bits\add_to_shopping_cart.png" />
+    <Content Include="img\24_bits\attachment.png" />
+    <Content Include="img\24_bits\back.png" />
+    <Content Include="img\24_bits\camera.png" />
+    <Content Include="img\24_bits\chart_down.png" />
+    <Content Include="img\24_bits\chart_up.png" />
+    <Content Include="img\24_bits\clock.png" />
+    <Content Include="img\24_bits\comment.png" />
+    <Content Include="img\24_bits\cut.png" />
+    <Content Include="img\24_bits\delete.png" />
+    <Content Include="img\24_bits\delete_page.png" />
+    <Content Include="img\24_bits\download.png" />
+    <Content Include="img\24_bits\download_page.png" />
+    <Content Include="img\24_bits\edit.png" />
+    <Content Include="img\24_bits\edit_page.png" />
+    <Content Include="img\24_bits\email.png" />
+    <Content Include="img\24_bits\equalizer.png" />
+    <Content Include="img\24_bits\find.png" />
+    <Content Include="img\24_bits\folder.png" />
+    <Content Include="img\24_bits\globe.png" />
+    <Content Include="img\24_bits\help.png" />
+    <Content Include="img\24_bits\home.png" />
+    <Content Include="img\24_bits\id_card.png" />
+    <Content Include="img\24_bits\info.png" />
+    <Content Include="img\24_bits\lock.png" />
+    <Content Include="img\24_bits\mail.png" />
+    <Content Include="img\24_bits\new_page.png" />
+    <Content Include="img\24_bits\next.png" />
+    <Content Include="img\24_bits\page_accept.png" />
+    <Content Include="img\24_bits\pin.png" />
+    <Content Include="img\24_bits\put_in_shopping_cart.png" />
+    <Content Include="img\24_bits\receive_mail.png" />
+    <Content Include="img\24_bits\refresh.png" />
+    <Content Include="img\24_bits\remove.png" />
+    <Content Include="img\24_bits\remove_from_shopping_cart.png" />
+    <Content Include="img\24_bits\save.png" />
+    <Content Include="img\24_bits\search_mail.png" />
+    <Content Include="img\24_bits\send_mail.png" />
+    <Content Include="img\24_bits\shopping_cart.png" />
+    <Content Include="img\24_bits\shopping_cart_accept.png" />
+    <Content Include="img\24_bits\star.png" />
+    <Content Include="img\24_bits\text_page.png" />
+    <Content Include="img\24_bits\tool.png" />
+    <Content Include="img\24_bits\trash.png" />
+    <Content Include="img\24_bits\unlock.png" />
+    <Content Include="img\24_bits\up.png" />
+    <Content Include="img\24_bits\users.png" />
+    <Content Include="img\24_bits\warning.png" />
+    <Content Include="img\24_bits\zoom.png" />
+    <Content Include="img\24_bits\zoom_in.png" />
+    <Content Include="img\24_bits\zoom_out.png" />
+    <Content Include="img\btnNuevo.png" />
+    <Content Include="img\btnSave.png" />
+    <Content Include="img\cargarCOG.gif" />
+    <Content Include="img\close.png" />
+    <Content Include="img\edit.png" />
+    <Content Include="img\EnvioSolicitud.png" />
+    <Content Include="img\iconAdd.png" />
+    <Content Include="img\iconCancel.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\menuicon.png" />
+    <Content Include="img\next.png" />
+    <Content Include="img\prev.png" />
+    <Content Include="css\img\print.png" />
+    <Content Include="img\save.png" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="js\lightbox-2.6.min.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="RH\ListadoEmpleados.aspx" />
+    <Content Include="RH\IngresoEmpleados.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="bin\AplicacionCOG.dll.config" />
+    <None Include="Properties\PublishProfiles\pub.pubxml" />
+    <None Include="Properties\PublishProfiles\pubsipa.pubxml" />
+    <Content Include="Reporte.xsc">
+      <DependentUpon>Reporte.xsd</DependentUpon>
+    </Content>
+    <None Include="Reporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reporte.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Reporte.xss">
+      <DependentUpon>Reporte.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.dropotron-1.0.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.slidertron-1.1.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Usuario\IngresarUsuarios.aspx" />
+    <Content Include="Usuario\ModificarContra.aspx" />
+    <Content Include="Usuario\ModificarUsuario.aspx" />
+    <Content Include="Usuario\Permisos.aspx" />
+    <Content Include="vendor\animate\animate.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\bootstrap\js\popper.js" />
+    <Content Include="vendor\bootstrap\js\popper.min.js" />
+    <Content Include="vendor\bootstrap\js\tooltip.js" />
+    <Content Include="vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="vendor\select2\select2.css" />
+    <Content Include="vendor\select2\select2.js" />
+    <Content Include="vendor\select2\select2.min.css" />
+    <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioDeCorreos.cs" />
+    <Compile Include="FuncionesVarias.cs" />
+    <Compile Include="Numalet.cs" />
+    <Compile Include="Reporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RH\CargarArchivo.aspx.cs">
+      <DependentUpon>CargarArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\CargarArchivo.aspx.designer.cs">
+      <DependentUpon>CargarArchivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Alergia\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Alergia\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Alergia\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Alergia\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Alergia\ListadoAlergia.aspx.cs">
+      <DependentUpon>ListadoAlergia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Alergia\ListadoAlergia.aspx.designer.cs">
+      <DependentUpon>ListadoAlergia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Departamento\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Departamento\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Departamento\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Departamento\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Departamento\ListadoDepartamento.aspx.cs">
+      <DependentUpon>ListadoDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Departamento\ListadoDepartamento.aspx.designer.cs">
+      <DependentUpon>ListadoDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Enfermedad\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Enfermedad\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Enfermedad\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Enfermedad\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Enfermedad\ListadoEnfermedad.aspx.cs">
+      <DependentUpon>ListadoEnfermedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Enfermedad\ListadoEnfermedad.aspx.designer.cs">
+      <DependentUpon>ListadoEnfermedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Civil\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Civil\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Civil\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Civil\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Civil\ListadoEstadoCivil.aspx.cs">
+      <DependentUpon>ListadoEstadoCivil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Civil\ListadoEstadoCivil.aspx.designer.cs">
+      <DependentUpon>ListadoEstadoCivil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Contrato\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Contrato\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Contrato\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Contrato\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Contrato\ListadoEstadoContrato.aspx.cs">
+      <DependentUpon>ListadoEstadoContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Estado_Contrato\ListadoEstadoContrato.aspx.designer.cs">
+      <DependentUpon>ListadoEstadoContrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Genero\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Genero\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Genero\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Genero\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Genero\ListadoGeneros.aspx.cs">
+      <DependentUpon>ListadoGeneros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Genero\ListadoGeneros.aspx.designer.cs">
+      <DependentUpon>ListadoGeneros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Municipio\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Municipio\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Municipio\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Municipio\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Municipio\ListadoMunicipio.aspx.cs">
+      <DependentUpon>ListadoMunicipio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Municipio\ListadoMunicipio.aspx.designer.cs">
+      <DependentUpon>ListadoMunicipio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Parentesco\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Parentesco\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Parentesco\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Parentesco\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Parentesco\ListadoParentesco.aspx.cs">
+      <DependentUpon>ListadoParentesco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Parentesco\ListadoParentesco.aspx.designer.cs">
+      <DependentUpon>ListadoParentesco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Profesion\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Profesion\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Profesion\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Profesion\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Profesion\ListadoProfesion.aspx.cs">
+      <DependentUpon>ListadoProfesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Profesion\ListadoProfesion.aspx.designer.cs">
+      <DependentUpon>ListadoProfesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Renglon_Presupuestario\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Renglon_Presupuestario\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Renglon_Presupuestario\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Renglon_Presupuestario\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Renglon_Presupuestario\ListadoRenglonPresupuestario.aspx.cs">
+      <DependentUpon>ListadoRenglonPresupuestario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Renglon_Presupuestario\ListadoRenglonPresupuestario.aspx.designer.cs">
+      <DependentUpon>ListadoRenglonPresupuestario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Licencia\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Licencia\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Licencia\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Licencia\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Licencia\ListadoTipoLicencia.aspx.cs">
+      <DependentUpon>ListadoTipoLicencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Licencia\ListadoTipoLicencia.aspx.designer.cs">
+      <DependentUpon>ListadoTipoLicencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Sangre\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Sangre\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Sangre\Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Sangre\Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Sangre\ListadoTipoSangre.aspx.cs">
+      <DependentUpon>ListadoTipoSangre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Catalogos\Tipo_Sangre\ListadoTipoSangre.aspx.designer.cs">
+      <DependentUpon>ListadoTipoSangre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Empleado\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\Crear.aspx.cs">
+      <DependentUpon>Crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Empleado\Crear.aspx.designer.cs">
+      <DependentUpon>Crear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\DownloadFileHandler.ashx.cs">
+      <DependentUpon>DownloadFileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\EditarFicha.aspx.cs">
+      <DependentUpon>EditarFicha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Empleado\EditarFicha.aspx.designer.cs">
+      <DependentUpon>EditarFicha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\FileUploadHandler.ashx.cs">
+      <DependentUpon>FileUploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\IngresoVacaciones.aspx.cs">
+      <DependentUpon>IngresoVacaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Empleado\IngresoVacaciones.aspx.designer.cs">
+      <DependentUpon>IngresoVacaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\ListadoEmpleados.aspx.cs">
+      <DependentUpon>ListadoEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Empleado\ListadoEmpleados.aspx.designer.cs">
+      <DependentUpon>ListadoEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Empleado\ListadoHistorialContratos.aspx.cs">
+      <DependentUpon>ListadoHistorialContratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Empleado\ListadoHistorialContratos.aspx.designer.cs">
+      <DependentUpon>ListadoHistorialContratos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Vacaciones\Crear.aspx.cs">
+      <DependentUpon>Crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Vacaciones\Crear.aspx.designer.cs">
+      <DependentUpon>Crear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\Vacaciones\ListaSolicitudVacaciones.aspx.cs">
+      <DependentUpon>ListaSolicitudVacaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\Vacaciones\ListaSolicitudVacaciones.aspx.designer.cs">
+      <DependentUpon>ListaSolicitudVacaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WsTipoCambio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CreateExcelFile.cs" />
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\ListadoEmpleados.aspx.cs">
+      <DependentUpon>ListadoEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\ListadoEmpleados.aspx.designer.cs">
+      <DependentUpon>ListadoEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RH\IngresoEmpleados.aspx.cs">
+      <DependentUpon>IngresoEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RH\IngresoEmpleados.aspx.designer.cs">
+      <DependentUpon>IngresoEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario\IngresarUsuarios.aspx.cs">
+      <DependentUpon>IngresarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\IngresarUsuarios.aspx.designer.cs">
+      <DependentUpon>IngresarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\ModificarContra.aspx.cs">
+      <DependentUpon>ModificarContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\ModificarContra.aspx.designer.cs">
+      <DependentUpon>ModificarContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\ModificarUsuario.aspx.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\ModificarUsuario.aspx.designer.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\Permisos.aspx.cs">
+      <DependentUpon>Permisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\Permisos.aspx.designer.cs">
+      <DependentUpon>Permisos.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Principal.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\iconic\iconic_stroke.eot" />
+    <Content Include="fonts\iconic\iconic_stroke.otf" />
+    <Content Include="fonts\iconic\iconic_stroke.ttf" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Service References\WsTipoCambio\TipoCambio.wsdl" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.DataVariable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.InfoVariable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.TipoCambioDiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.TipoCambioDiaStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.TipoCambioFechaInicialMonedaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.TipoCambioFechaInicialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.TipoCambioRangoMonedaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.TipoCambioRangoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.VariablesDisponiblesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsTipoCambio\RRHH.WsTipoCambio.VariablesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaAD\CapaAD.csproj">
+      <Project>{CDC88454-6BF6-4734-82F6-E14860C638A1}</Project>
+      <Name>CapaAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEN\CapaEN.csproj">
+      <Project>{7ab9d40c-0e73-4252-b310-fc27f9837082}</Project>
+      <Name>CapaEN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLN\CapaLN.csproj">
+      <Project>{83e526c4-2e79-471a-a411-8971a3c47fe6}</Project>
+      <Name>CapaLN</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RH\Archivos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WsTipoCambio\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57814</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61306/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
